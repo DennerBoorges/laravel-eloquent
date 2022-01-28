@@ -59,7 +59,13 @@ class ClientController extends Controller
 
     public function name($name)
     {
-        $client = Client::where('name', '=', $name)->first();
+        $client = Client::where('name', '=', $name)->get();
+        return response()->json($client);
+    }
+
+    public function text($name)
+    {
+        $client = Client::where('name', 'LIKE', "%$name%")->get();
         return response()->json($client);
     }
 
