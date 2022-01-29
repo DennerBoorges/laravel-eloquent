@@ -55,7 +55,7 @@ class ClientController extends Controller
     }
     public function order()
     {
-        $client = Client::orderBy('name', 'desc')->limit(2)->get();
+        $client = Client::orderBy('name', 'asc')->limit(2)->get();
         return response()->json($client);
     }
 }
