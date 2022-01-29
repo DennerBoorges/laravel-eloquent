@@ -40,7 +40,7 @@ class ClientController extends Controller
         return response()->json($client);
     }
 
-    public function expansive($valor)
+    public function expensive($valor)
     {
         $valor = Bill::where('value', '>', $valor)->get();
         return response()->json($valor);
@@ -55,7 +55,7 @@ class ClientController extends Controller
     }
     public function order()
     {
-        $client = Client::orderBy('name', 'desc')->limit(3)->get();
+        $client = Client::orderBy('name', 'desc')->limit(2)->get();
         return response()->json($client);
     }
 }

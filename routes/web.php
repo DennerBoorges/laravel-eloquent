@@ -29,7 +29,7 @@ Route::get('/clients/search/{text}', [ClientController::class, 'text']);
 
 Route::get('/clients/bills/{client}', [ClientController::class, 'bills']);
 
-Route::get('/bills/expansive/{value}', [ClientController::class, 'expansive']);
+Route::get('/bills/expensive/{value}', [ClientController::class, 'expensive']);
 
 Route::get('/bills/between/{value1}/{value2}', [ClientController::class, 'between']);
 
