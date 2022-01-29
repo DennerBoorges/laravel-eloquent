@@ -9,32 +9,7 @@ use App\Http\Requests\UpdateClientRequest;
 
 class ClientController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function index()
-    {
-        //
-    }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
-    {
-        return view('clients.create');
-    }
-
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \App\Http\Requests\StoreClientRequest  $request
-     * @return \Illuminate\Http\Response
-     */
     public function store(StoreClientRequest $request)
     {
         $client = Client::create([
@@ -44,17 +19,6 @@ class ClientController extends Controller
             'id_number'=>$request->id_number
         ]);
 
-        return response()->json($client);
-    }
-
-    /**
-     * Display the specified resource.
-     *
-     * @param  \App\Models\Client  $client
-     * @return \Illuminate\Http\Response
-     */
-    public function show(Client $client)
-    {
         return response()->json($client);
     }
 
@@ -76,37 +40,22 @@ class ClientController extends Controller
         return response()->json($client);
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  \App\Models\Client  $client
-     * @return \Illuminate\Http\Response
-     */
-    public function edit(Client $client)
+    public function expansive($valor)
     {
-        //
+        $valor = Bill::where('value', '>', $valor)->get();
+        return response()->json($valor);
     }
 
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \App\Http\Requests\UpdateClientRequest  $request
-     * @param  \App\Models\Client  $client
-     * @return \Illuminate\Http\Response
-     */
-    public function update(UpdateClientRequest $request, Client $client)
+    public function between($valor1, $valor2)
     {
-        //
-    }
+        $valor = Bill::where('value', '>', $valor1)->where('value', '<', $valor2)->get();
+        return response()->json($valor);
 
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  \App\Models\Client  $client
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy(Client $client)
+
+    }
+    public function order()
     {
-        //
+        $client = Client::orderBy('name', 'desc')->limit(3)->get();
+        return response()->json($client);
     }
 }

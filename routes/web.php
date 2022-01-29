@@ -29,6 +29,13 @@ Route::get('/clients/search/{text}', [ClientController::class, 'text']);
 
 Route::get('/clients/bills/{client}', [ClientController::class, 'bills']);
 
+Route::get('/bills/expansive/{value}', [ClientController::class, 'expansive']);
+
+Route::get('/bills/between/{value1}/{value2}', [ClientController::class, 'between']);
+
+Route::get('/clients/order', [ClientController::class, 'order']);
+
+
 
 
 
