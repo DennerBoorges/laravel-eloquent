@@ -44,6 +44,7 @@ class BillController extends Controller
             'due_date'=>$request->due_date,
             'payment_date'=>$request->payment_date
         ]);
+    
     }
 
     /**

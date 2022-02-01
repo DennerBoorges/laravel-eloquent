@@ -13,7 +13,9 @@ class StoreBillRequest extends FormRequest
      */
     public function authorize()
     {
-        return true;
+        $user_name = auth()->user()->name;
+
+        return !str_contains($user_name, 'Guest');
     }
 
     /**
@@ -39,4 +41,5 @@ class StoreBillRequest extends FormRequest
         'invoice.required' => 'Uma fatura é obrigatória'
         ];
     }
+
 }
