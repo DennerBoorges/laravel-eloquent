@@ -34,7 +34,8 @@ class StoreClientRequest extends FormRequest
     public function messages()
     {
         return [
-            'name.required' => 'Um nome é obrigatório'
+            'name.required' => 'Um nome é obrigatório',
+            'email.required' => 'E-mail não pode ser vazio'
         ];
     }
 }
