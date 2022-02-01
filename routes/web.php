@@ -35,7 +35,7 @@ Route::get('/bills/between/{value1}/{value2}', [ClientController::class, 'betwee
 
 Route::get('/clients/order', [ClientController::class, 'order']);
 
-Route::post('bills/store', [BillController::class, 'bills']);
+Route::post('/bills/store', [BillController::class, 'bills']);
 
 
 
