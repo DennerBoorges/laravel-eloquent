@@ -34,9 +34,16 @@ class BillController extends Controller
      * @param  \App\Http\Requests\StoreBillRequest  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(StoreBillRequest $request)
+    public function bills(StoreBillRequest $request)
     {
-        //
+        $client = Bill::create([
+            'invoice'=>$request->invoice,
+            'installment'=>$request->installment,
+            'value'=>$request->value,
+            'client_id'=>$request->client_id,
+            'due_date'=>$request->due_date,
+            'payment_date'=>$request->payment_date
+        ]);
     }
 
     /**

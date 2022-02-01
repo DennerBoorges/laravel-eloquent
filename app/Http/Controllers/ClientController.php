@@ -12,6 +12,7 @@ class ClientController extends Controller
 
     public function store(StoreClientRequest $request)
     {
+
         $client = Client::create([
             'name'=>$request->name,
             'email'=>$request->email,
@@ -57,5 +58,10 @@ class ClientController extends Controller
     {
         $client = Client::orderBy('name', 'asc')->limit(2)->get();
         return response()->json($client);
+    }
+
+    public function create()
+    {
+        return view('clients.create');
     }
 }

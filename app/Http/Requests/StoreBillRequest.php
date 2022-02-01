@@ -23,8 +23,20 @@ class StoreBillRequest extends FormRequest
      */
     public function rules()
     {
+            return [
+                'invoice'=> 'required',
+                'installment'=> 'required',
+                'value'=> 'required',
+                'client_id'=> 'required',
+                'due_date' => 'required',
+                'payment_date' => 'required'
+        ];
+    }
+
+    public function messages()
+    {
         return [
-            //
+        'invoice.required' => 'Uma fatura é obrigatória'
         ];
     }
 }
