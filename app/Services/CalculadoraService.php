@@ -2,7 +2,7 @@
 
 class CalculadoraService
 {
-    public function num($num1, $num2)
+    public function sum($num1, $num2)
     {
         try 
         {
