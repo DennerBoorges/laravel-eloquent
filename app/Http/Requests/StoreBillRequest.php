@@ -25,6 +25,7 @@ class StoreBillRequest extends FormRequest
      */
     public function rules()
     {
+        
             return [
                 'invoice'=> 'required',
                 'installment'=> 'required',
