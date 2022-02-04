@@ -8,6 +8,6 @@ class ClientRepository extends BaseRepository
 {
     public function model()
     {
-        return 'App\Models\Bills';
+        return 'App\Models\Client';
     }
 }
