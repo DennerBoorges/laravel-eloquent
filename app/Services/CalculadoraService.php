@@ -34,7 +34,7 @@ class CalculadoraService
             {
                 return 
                 [
-                    'sucess' => false,
+                    'success' => false,
                     'message' => 'Divisão por zero'
                 ];
             }
@@ -43,7 +43,7 @@ class CalculadoraService
 
             return 
             [
-                'sucess' => true,
+                'success' => true,
                 'message' => 'Div feita com sucesso',
                 'data' => $result
             ];
@@ -52,7 +52,7 @@ class CalculadoraService
         {
             return 
             [
-                'sucess' => false,
+                'success' => false,
                 'massage' => 'Erro ao fazer div'
             ];
         }
