@@ -14,13 +14,13 @@ class CalculadoraService
         {
             return 
             [
-                'sucess' => false,
+                'success' => false,
                 'massage' => 'Erro ao fazer soma'
             ];
         }
             return 
             [
-                'sucess' => true,
+                'success' => true,
                 'message' => 'Soma feita com sucesso',
                 'data' => $result
             ];
