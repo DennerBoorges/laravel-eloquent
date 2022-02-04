@@ -1,5 +1,7 @@
 <?php
 
+namespace App\Services;
+
 class CalculadoraService
 {
     public function sum($num1, $num2)

@@ -38,6 +38,8 @@ Route::get('/clients/order', [ClientController::class, 'order']);
 
 Route::post('/bills/store', [BillController::class, 'bills']);
 
+Route::get('/clients/{num1}/{num2}', [ClientController::class, 'sum']);
+
 
 
 
