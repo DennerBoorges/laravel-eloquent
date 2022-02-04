@@ -15,7 +15,7 @@ class CalculadoraService
             return 
             [
                 'success' => false,
-                'massage' => 'Erro ao fazer soma'
+                'message' => 'Erro ao fazer soma'
             ];
         }
             return 
