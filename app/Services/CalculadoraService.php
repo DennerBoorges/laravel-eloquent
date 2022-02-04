@@ -53,7 +53,7 @@ class CalculadoraService
             return 
             [
                 'success' => false,
-                'massage' => 'Erro ao fazer div'
+                'message' => 'Erro ao fazer div'
             ];
         }
     }       
