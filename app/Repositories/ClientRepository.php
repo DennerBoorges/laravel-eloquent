@@ -4,10 +4,10 @@ namespace  App\Repositories;
 
 use Prettus\Repository\Eloquent\BaseRepository;
 
-class BillRepository extends BaseRepository 
+class ClientRepository extends BaseRepository 
 {
     public function model()
     {
-        return 'App\Models\Bill';
+        return 'App\Models\Client';
     }
 }
